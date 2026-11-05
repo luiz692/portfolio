@@ -4,8 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- ✏️ TROQUE: título e descrição que aparecem no Google / ao compartilhar -->
-<title>Seu Nome | Desenvolvedor</title>
-<meta name="description" content="Portfólio e currículo de Seu Nome — desenvolvedor de software.">
+<title>Luiz Antonio | Desenvolvedor</title>
+<meta name="description" content="Portfólio de Luiz Antonio Marcussi Neto, desenvolvedor de Marília (SP): projetos em C#/.NET, Next.js, PostgreSQL e Python.">
+<meta property="og:title" content="Luiz Antonio | Desenvolvedor">
+<meta property="og:description" content="Projetos, habilidades e contato.">
+<meta property="og:image" content="https://luiz692.github.io/portfolio/assets/foto-recorte.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -142,7 +145,7 @@
   .info li span:last-child{text-align:right}
 
   /* SKILLS */
-  .skills{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+  .skills{display:grid;grid-template-columns:repeat(7,1fr);gap:14px}
   .skill{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;aspect-ratio:1.1;border-radius:18px;background:var(--card);border:1px solid var(--line);font-size:14px;color:var(--muted);transition:.3s;position:relative;overflow:hidden}
   .skill i{font-size:40px;transition:transform .4s}
   .skill:hover{border-color:var(--accent);color:var(--text);transform:translateY(-4px)}
@@ -177,6 +180,27 @@
   .project .links a{font-size:13px;font-weight:500;padding:10px 16px;border-radius:12px;border:1px solid var(--line-2);display:inline-flex;gap:8px;align-items:center;transition:.25s}
   .project .links a:hover{background:var(--text);color:var(--bg)}
   .project .links svg{width:14px;height:14px}
+
+  .thumb-pet{background:#f3ece1}
+  .thumb-pet img{width:min(62%,300px);border-radius:50%;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+  .project:hover .thumb-pet img{transform:scale(1.05) rotate(-2deg)}
+  .live{position:absolute;top:16px;left:16px;display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:6px 11px;border-radius:999px;background:#1f2a1f;color:#e9f5e0}
+  .live i{width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 8px #4ade80;animation:pulse 2s infinite}
+  .feats{margin-top:14px;padding-left:0;display:grid;gap:6px}
+  .feats li{list-style:none;font-size:14px;color:var(--muted);padding-left:20px;position:relative}
+  .feats li::before{content:"→";position:absolute;left:0;color:var(--accent)}
+  .mock.api .bar b{margin-left:8px;font-family:var(--mono);font-size:10.5px;font-weight:400;color:var(--dim)}
+  .mock.api .body{gap:7px}
+  .mock.api .body p{font-family:var(--mono);font-size:11.5px;color:var(--muted);display:flex;gap:10px;align-items:center;padding:6px 8px;border-radius:7px;background:rgba(255,255,255,.03)}
+  .mock.api em{font-style:normal;font-size:10px;font-weight:600;width:38px;text-align:center;padding:2px 0;border-radius:4px;color:#0b0b0d}
+  .mock.api .get{background:#61affe}.mock.api .post{background:#49cc90}.mock.api .put{background:#fca130}
+  .graph{width:86%;color:var(--text)}
+  .graph circle{fill:var(--card-2);stroke:var(--line-2);stroke-width:1.5}
+  .graph circle.on{stroke:var(--accent);fill:#1e2414}
+  .graph text{fill:var(--text)}
+  .graph .path{stroke:var(--accent);stroke-dasharray:6 6;animation:dash 1.5s linear infinite}
+  @keyframes dash{to{stroke-dashoffset:-24}}
+  .timeline.single{max-width:760px}
 
   /* JORNADA / TIMELINE */
   .timeline-wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px}
@@ -257,7 +281,7 @@
     .nav .cta{display:none}
     section{padding:90px 0}
     .row2{grid-template-columns:1fr}
-    .skills{grid-template-columns:repeat(3,1fr)}
+    .skills{grid-template-columns:repeat(4,1fr)}
     .scroll-hint{display:none}
   }
   @media (max-width:480px){
@@ -272,7 +296,7 @@
 
 <!-- ============ NAV ============ -->
 <nav class="nav" id="nav">
-  <a href="#inicio" class="logo">sn<span>.</span></a> <!-- ✏️ suas iniciais -->
+  <a href="#inicio" class="logo">la<span>.</span></a>
   <div class="links">
     <a class="link" href="#sobre">Sobre</a>
     <a class="link" href="#skills">Habilidades</a>
@@ -290,30 +314,28 @@
   <div class="glow"></div>
   <div class="wrap hero-grid">
     <div class="reveal">
-      <div class="tag"><span class="dot"></span> Disponível para oportunidades</div>
-      <!-- ✏️ SEU NOME -->
-      <h1>Seu Nome<br><span class="serif">Sobrenome.</span></h1>
-      <p class="lead"><strong>Desenvolvedor Full Stack</strong> que transforma problemas reais em produtos bem construídos — do backend à interface, com cuidado em cada detalhe.</p>
+      <div class="tag"><span class="dot"></span> Aberto a oportunidades</div>
+      <h1>Luiz Antonio<br><span class="serif">Marcussi Neto.</span></h1>
+      <p class="lead"><strong>Desenvolvedor</strong> de Marília (SP). Construo APIs em <strong>C# e .NET</strong> e aplicações web com <strong>Next.js e PostgreSQL</strong> — de sistema de controle de dívidas a site com votação ao vivo para plateia.</p>
       <div class="btns">
         <a href="#projetos" class="btn primary">Ver projetos
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-        <!-- ✏️ coloque seu PDF na pasta assets com o nome curriculo.pdf -->
-        <a href="assets/curriculo.pdf" download class="btn ghost">Baixar CV
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v12m0 0-5-5m5 5 5-5M5 20h14"/></svg></a>
+        <a href="#contato" class="btn ghost">Entrar em contato
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16v12H4zM4 7l8 6 8-6"/></svg></a>
       </div>
       <div class="socials">
-        <a href="https://linkedin.com/in/seu-usuario" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a>
-        <a href="https://github.com/seu-usuario" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg>GitHub</a>
-        <a href="https://instagram.com/seu-usuario" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>Instagram</a>
+        <a href="https://www.linkedin.com/in/luiz-antonio-818554282/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a>
+        <a href="https://github.com/luiz692" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg>GitHub</a>
+        <a href="mailto:la9643076@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16v12H4zM4 7l8 6 8-6"/></svg>E-mail</a>
       </div>
     </div>
 
     <div class="photo-card reveal">
       <div class="ring"></div>
-      <div class="clip"><img src="assets/foto-recorte.png" alt="Foto de Seu Nome"></div>
-      <div class="chip c1"><small>Experiência</small><b>+3</b> anos codando</div>
-      <div class="chip c2"><span class="k">const</span> dev = {<br>&nbsp; foco: <span class="s">'qualidade'</span>,<br>&nbsp; <span class="f">build</span>() {}<br>}</div>
-      <div class="chip c3"><span class="dot"></span> Aberto a novos projetos</div>
+      <div class="clip"><img src="assets/foto-recorte.png" alt="Foto de Luiz Antonio"></div>
+      <div class="chip c1"><small>No GitHub desde</small><b>2023</b></div>
+      <div class="chip c2"><span class="k">var</span> luiz = <span class="k">new</span> <span class="f">Dev</span>(<br>&nbsp; cidade: <span class="s">"Marília"</span>,<br>&nbsp; stack: <span class="s">".NET + Next"</span><br>);</div>
+      <div class="chip c3"><span class="dot"></span> Marília · SP</div>
     </div>
   </div>
   <div class="scroll-hint">SCROLL<i></i></div>
@@ -322,8 +344,8 @@
 <!-- ============ MARQUEE ============ -->
 <div class="marquee" aria-hidden="true">
   <div class="track">
-    <span>Desenvolvimento Web</span><span>APIs & Backend</span><span>Interfaces Modernas</span><span>Cloud & DevOps</span><span>UX que funciona</span>
-    <span>Desenvolvimento Web</span><span>APIs & Backend</span><span>Interfaces Modernas</span><span>Cloud & DevOps</span><span>UX que funciona</span>
+    <span>C# & .NET</span><span>APIs REST</span><span>Next.js</span><span>PostgreSQL</span><span>SQLite</span><span>Python</span><span>Estrutura de dados</span>
+    <span>C# & .NET</span><span>APIs REST</span><span>Next.js</span><span>PostgreSQL</span><span>SQLite</span><span>Python</span><span>Estrutura de dados</span>
   </div>
 </div>
 
@@ -336,20 +358,19 @@
     </div>
     <div class="about">
       <div class="card about-text reveal">
-        <!-- ✏️ seu resumo profissional -->
-        <p>Sou desenvolvedor apaixonado por construir produtos digitais que resolvem problemas de verdade — com código limpo, boa arquitetura e atenção à experiência de quem usa.</p>
-        <p>Hoje atuo como <strong>Cargo Atual</strong> na <strong>Empresa X</strong>, onde trabalho com APIs, integrações e interfaces. Gosto de entender o negócio antes de escrever a primeira linha de código.</p>
-        <p>Fora do trabalho, curso <strong>Nome do Curso</strong> na <strong>Faculdade Y</strong> e estou sempre estudando algo novo — atualmente arquitetura de software e cloud.</p>
+        <p>Sou o Luiz, de Marília (SP). Gosto de pegar um problema do mundo real e transformar em software que as pessoas usam de verdade.</p>
+        <p>No back-end, trabalho com <strong>C# e .NET</strong>: APIs com ASP.NET Core, regras de negócio bem definidas, validações e documentação com Swagger. Na web, uso <strong>Next.js</strong> com <strong>PostgreSQL</strong> e publico na Vercel.</p>
+        <p>Meu projeto mais recente, o <strong>Pet sem Mito</strong>, foi feito para um projeto de Medicina Veterinária: um site com quiz, ranking e votação ao vivo que a plateia usa pelo celular durante um teatro. Também gosto da base teórica — implementei grafos de três formas diferentes em Python, em trabalho de grupo.</p>
       </div>
       <div class="about-side">
-        <div class="card stat reveal"><b data-count="3">0<em>+</em></b><span>anos de experiência</span></div>
-        <div class="card stat reveal"><b data-count="15">0<em>+</em></b><span>projetos entregues</span></div>
+        <div class="card stat reveal"><b data-count="4">0</b><span>projetos públicos no GitHub</span></div>
+        <div class="card stat reveal"><b data-count="4">0</b><span>linguagens usadas nos projetos</span></div>
         <div class="card info reveal">
           <ul>
-            <li><span>Localização</span><span>São Paulo, SP</span></li>
-            <li><span>Formação</span><span>Eng. de Software</span></li>
-            <li><span>Idiomas</span><span>PT · EN · ES</span></li>
-            <li><span>Modelo</span><span>Remoto / Híbrido</span></li>
+            <li><span>Localização</span><span>Marília, SP</span></li>
+            <li><span>Foco</span><span>Back-end & Web</span></li>
+            <li><span>GitHub</span><span>@luiz692</span></li>
+            <li><span>Status</span><span>Aberto a oportunidades</span></li>
           </ul>
         </div>
       </div>
@@ -366,21 +387,23 @@
     </div>
     <!-- ✏️ ícones: https://devicon.dev — troque o nome no class="devicon-NOME-plain colored" -->
     <div class="skills reveal">
-      <div class="skill"><i class="devicon-javascript-plain colored"></i>JavaScript</div>
-      <div class="skill"><i class="devicon-typescript-plain colored"></i>TypeScript</div>
-      <div class="skill"><i class="devicon-react-original colored"></i>React</div>
+      <div class="skill"><i class="devicon-csharp-plain colored"></i>C#</div>
+      <div class="skill"><i class="devicon-dotnetcore-plain colored"></i>.NET</div>
       <div class="skill"><i class="devicon-nextjs-plain" style="color:#fff"></i>Next.js</div>
-      <div class="skill"><i class="devicon-nodejs-plain colored"></i>Node.js</div>
-      <div class="skill"><i class="devicon-java-plain colored"></i>Java</div>
-      <div class="skill"><i class="devicon-spring-original colored"></i>Spring</div>
+      <div class="skill"><i class="devicon-react-original colored"></i>React</div>
+      <div class="skill"><i class="devicon-javascript-plain colored"></i>JavaScript</div>
       <div class="skill"><i class="devicon-python-plain colored"></i>Python</div>
       <div class="skill"><i class="devicon-postgresql-plain colored"></i>PostgreSQL</div>
-      <div class="skill"><i class="devicon-docker-plain colored"></i>Docker</div>
+      <div class="skill"><i class="devicon-sqlite-plain colored"></i>SQLite</div>
+      <div class="skill"><i class="devicon-html5-plain colored"></i>HTML</div>
+      <div class="skill"><i class="devicon-css3-plain colored"></i>CSS</div>
+      <div class="skill"><i class="devicon-swagger-plain colored"></i>Swagger</div>
+      <div class="skill"><i class="devicon-vercel-original" style="color:#fff"></i>Vercel</div>
       <div class="skill"><i class="devicon-git-plain colored"></i>Git</div>
-      <div class="skill"><i class="devicon-figma-plain colored"></i>Figma</div>
+      <div class="skill"><i class="devicon-github-original" style="color:#fff"></i>GitHub</div>
     </div>
     <div class="soft reveal">
-      <span>Comunicação clara</span><span>Trabalho em equipe</span><span>Resolução de problemas</span><span>Metodologias ágeis</span><span>Autonomia</span><span>Aprendizado rápido</span>
+      <span>APIs REST</span><span>Regras de negócio</span><span>Validação de dados</span><span>Modelagem de banco</span><span>Estruturas de dados</span><span>Trabalho em equipe</span>
     </div>
   </div>
 </section>
@@ -390,50 +413,90 @@
   <div class="wrap">
     <div class="head reveal">
       <div><div class="num">03 — PROJETOS</div><h2>Trabalhos em <span class="serif">destaque</span></h2></div>
-      <a href="https://github.com/seu-usuario" target="_blank" rel="noopener" class="btn ghost">Ver todos no GitHub
+      <a href="https://github.com/luiz692?tab=repositories" target="_blank" rel="noopener" class="btn ghost">Ver todos no GitHub
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
     </div>
     <div class="projects">
-      <!-- ✏️ PROJETO 1 (destaque grande). Para usar print real: troque o <div class="mock">…</div> por <img src="assets/projeto1.png" alt=""> -->
+      <!-- PROJETO 1 (destaque) -->
       <article class="card project reveal">
-        <div class="thumb">
-          <div class="mock"><div class="bar"><i></i><i></i><i></i></div><div class="body"><div class="hl"></div><div style="width:70%"></div><div class="row"><span></span><span></span><span></span></div><div></div><div style="width:55%"></div></div></div>
+        <div class="thumb thumb-pet">
+          <img src="assets/pet-sem-mito-logo.jpg" alt="Logo do Pet sem Mito" loading="lazy">
+          <span class="live"><i></i> No ar</span>
         </div>
         <div class="content">
           <div class="meta"><span>01 / FULL STACK</span><span>2026</span></div>
-          <h3>Nome do Projeto Principal</h3>
-          <p>Descrição curta do que o projeto faz, qual problema resolve e o que tem de mais interessante na parte técnica — autenticação, dashboards, integrações, etc.</p>
-          <div class="stack"><span>React</span><span>Node.js</span><span>PostgreSQL</span><span>Docker</span></div>
+          <h3>Pet sem Mito</h3>
+          <p>Site do projeto <em>Mito e Verdade na Medicina Veterinária</em>, usado num teatro interativo sobre saúde animal. A plateia vota pelo celular se cada afirmação é mito ou verdade, e o telão mostra os votos subindo ao vivo, com QR code e resultado final.</p>
+          <ul class="feats">
+            <li>Votação ao vivo com controle das rodadas pela equipe</li>
+            <li>Quiz com pontuação, bônus por sequência e ranking</li>
+            <li>Área de dúvidas respondidas e edição do conteúdo</li>
+            <li>API própria em rotas do Next.js, banco criado na primeira execução</li>
+          </ul>
+          <div class="stack"><span>Next.js</span><span>React</span><span>PostgreSQL</span><span>Neon</span><span>Vercel</span></div>
           <div class="links">
-            <a href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg>Código</a>
-            <a href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg>Ver online</a>
+            <a href="https://pet-sem-mito.vercel.app" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg>Ver online</a>
+            <a href="https://github.com/luiz692/pet-sem-mito" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg>Código</a>
           </div>
         </div>
       </article>
-      <!-- ✏️ PROJETO 2 -->
+
+      <!-- PROJETO 2 -->
       <article class="card project reveal">
         <div class="thumb">
-          <div class="mock"><div class="bar"><i></i><i></i><i></i></div><div class="body"><div style="width:45%"></div><div class="hl" style="width:80%"></div><div></div><div style="width:60%"></div></div></div>
+          <div class="mock api">
+            <div class="bar"><i></i><i></i><i></i><b>Vendinha.Api · Swagger</b></div>
+            <div class="body">
+              <p><em class="get">GET</em>/clientes?busca=&pagina=1</p>
+              <p><em class="post">POST</em>/clientes</p>
+              <p><em class="put">PUT</em>/clientes/{id}</p>
+              <p><em class="get">GET</em>/clientes/{id}/dividas</p>
+              <p><em class="post">POST</em>/dividas/{id}/pagar</p>
+            </div>
+          </div>
         </div>
         <div class="content">
-          <div class="meta"><span>02 / BACKEND</span><span>2025</span></div>
-          <h3>Segundo Projeto</h3>
-          <p>API com autenticação JWT, regras de negócio bem definidas e documentação completa.</p>
-          <div class="stack"><span>Java</span><span>Spring Boot</span><span>MySQL</span></div>
-          <div class="links"><a href="#" target="_blank" rel="noopener">Código</a><a href="#" target="_blank" rel="noopener">Detalhes</a></div>
+          <div class="meta"><span>02 / BACK-END</span><span>2026</span></div>
+          <h3>Vendinha</h3>
+          <p>API para controlar clientes e as "contas penduradas" de uma vendinha. Valida CPF pelos dígitos verificadores, lista quem deve mais primeiro, com paginação e busca, e só deixa uma dívida em aberto por cliente.</p>
+          <div class="stack"><span>C#</span><span>.NET 10</span><span>ASP.NET Core</span><span>SQLite</span><span>Swagger</span></div>
+          <div class="links">
+            <a href="https://github.com/luiz692/vendinha" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg>Código</a>
+          </div>
         </div>
       </article>
-      <!-- ✏️ PROJETO 3 -->
+
+      <!-- PROJETO 3 -->
       <article class="card project reveal">
         <div class="thumb">
-          <div class="mock"><div class="bar"><i></i><i></i><i></i></div><div class="body"><div class="row"><span></span><span></span><span></span></div><div class="hl" style="width:30%"></div><div style="width:85%"></div></div></div>
+          <svg class="graph" viewBox="0 0 320 180" aria-hidden="true">
+            <g stroke="currentColor" stroke-width="1.5" opacity=".35">
+              <line x1="60" y1="50" x2="150" y2="35"/><line x1="150" y1="35" x2="250" y2="60"/>
+              <line x1="60" y1="50" x2="100" y2="135"/><line x1="100" y1="135" x2="200" y2="140"/>
+              <line x1="150" y1="35" x2="200" y2="140"/><line x1="250" y1="60" x2="200" y2="140"/>
+              <line x1="250" y1="60" x2="285" y2="130"/>
+            </g>
+            <g class="path" stroke-width="2.5">
+              <line x1="60" y1="50" x2="150" y2="35"/><line x1="150" y1="35" x2="200" y2="140"/><line x1="200" y1="140" x2="250" y2="60"/>
+            </g>
+            <g font-family="JetBrains Mono" font-size="12" text-anchor="middle">
+              <circle cx="60" cy="50" r="15" class="on"/><text x="60" y="54">A</text>
+              <circle cx="150" cy="35" r="15" class="on"/><text x="150" y="39">B</text>
+              <circle cx="250" cy="60" r="15" class="on"/><text x="250" y="64">D</text>
+              <circle cx="100" cy="135" r="15"/><text x="100" y="139">E</text>
+              <circle cx="200" cy="140" r="15" class="on"/><text x="200" y="144">C</text>
+              <circle cx="285" cy="130" r="15"/><text x="285" y="134">F</text>
+            </g>
+          </svg>
         </div>
         <div class="content">
-          <div class="meta"><span>03 / FRONTEND</span><span>2025</span></div>
-          <h3>Terceiro Projeto</h3>
-          <p>Aplicação web responsiva com drag and drop, temas e uma interface caprichada.</p>
-          <div class="stack"><span>Next.js</span><span>TypeScript</span><span>Tailwind</span></div>
-          <div class="links"><a href="#" target="_blank" rel="noopener">Código</a><a href="#" target="_blank" rel="noopener">Ver online</a></div>
+          <div class="meta"><span>03 / ESTRUTURA DE DADOS</span><span>2026</span></div>
+          <h3>Grafos em Python</h3>
+          <p>Trabalho em grupo da faculdade: o mesmo grafo implementado como lista de adjacência, matriz de adjacência e lista de arestas. Aceita grafo direcionado ou não, calcula o grau de cada vértice, lista vizinhos e verifica se um percurso é possível.</p>
+          <div class="stack"><span>Python</span><span>Grafos</span><span>Algoritmos</span><span>Trabalho em grupo</span></div>
+          <div class="links">
+            <a href="https://github.com/luiz692/grafos" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg>Código</a>
+          </div>
         </div>
       </article>
     </div>
@@ -445,84 +508,38 @@
   <div class="wrap">
     <div class="head reveal">
       <div><div class="num">04 — JORNADA</div><h2>Minha <span class="serif">trajetória</span></h2></div>
-      <p>Experiência profissional e formação acadêmica, do mais recente ao mais antigo.</p>
+      <p>Do primeiro repositório aos projetos de hoje. Esta linha do tempo vai crescendo junto comigo.</p>
     </div>
-    <div class="timeline-wrap">
-      <div class="reveal">
-        <div class="tl-title">Experiência</div>
-        <div class="timeline">
-          <!-- ✏️ EXPERIÊNCIAS: copie um bloco .item para adicionar mais. "now" = emprego atual -->
-          <div class="item now">
-            <div class="when">jan/2025 — presente <span class="badge">Atual</span></div>
-            <h4>Desenvolvedor Pleno</h4>
-            <div class="where">Empresa X · São Paulo</div>
-            <p>Desenvolvimento de APIs e interfaces para o produto principal da empresa.</p>
-            <ul><li>Conquista ou responsabilidade importante</li><li>Resultado mensurável (ex: reduziu tempo de resposta em 40%)</li></ul>
-          </div>
-          <div class="item">
-            <div class="when">mar/2024 — dez/2024</div>
-            <h4>Desenvolvedor Júnior</h4>
-            <div class="where">Empresa Y</div>
-            <p>Manutenção e evolução de sistemas internos, correção de bugs e novas features.</p>
-          </div>
-          <div class="item">
-            <div class="when">ago/2023 — fev/2024</div>
-            <h4>Estágio em TI</h4>
-            <div class="where">Empresa Z</div>
-            <p>Primeira experiência no mercado: suporte, automações e primeiros projetos web.</p>
-          </div>
-        </div>
+    <div class="timeline single reveal">
+      <div class="item now">
+        <div class="when">out/2026 <span class="badge">Mais recente</span></div>
+        <h4>Pet sem Mito</h4>
+        <div class="where">Projeto com o curso de Medicina Veterinária</div>
+        <p>Primeiro projeto full stack no ar, usado ao vivo por uma plateia durante um teatro interativo. Next.js, PostgreSQL e Vercel.</p>
       </div>
-      <div class="reveal">
-        <div class="tl-title">Formação</div>
-        <div class="timeline">
-          <!-- ✏️ FORMAÇÃO -->
-          <div class="item now">
-            <div class="when">2024 — 2028 <span class="badge">Cursando</span></div>
-            <h4>Bacharelado em Engenharia de Software</h4>
-            <div class="where">Nome da Universidade</div>
-            <p>Foco em arquitetura, engenharia de requisitos e desenvolvimento de sistemas.</p>
-          </div>
-          <div class="item">
-            <div class="when">2021 — 2023</div>
-            <h4>Técnico em Desenvolvimento de Sistemas</h4>
-            <div class="where">Nome da Escola Técnica</div>
-            <p>Base em lógica, banco de dados, web e mobile.</p>
-          </div>
-          <div class="item">
-            <div class="when">2023</div>
-            <h4>Prêmio / Competição / Destaque</h4>
-            <div class="where">Ex: hackathon, olimpíada, SP Skills…</div>
-            <p>Conte rapidamente o que fez e o resultado.</p>
-          </div>
-        </div>
+      <div class="item">
+        <div class="when">out/2026</div>
+        <h4>Vendinha — API em .NET</h4>
+        <div class="where">Projeto pessoal</div>
+        <p>API REST em C# com .NET 10 e SQLite: cadastro de clientes, validação de CPF, dívidas com regras de negócio e documentação no Swagger.</p>
       </div>
-    </div>
-
-    <div class="extras">
-      <div class="card reveal">
-        <h5>Certificações</h5>
-        <ul><!-- ✏️ -->
-          <li>AWS Cloud Practitioner<span>2025</span></li>
-          <li>Curso / Certificado X<span>2024</span></li>
-          <li>Curso / Certificado Y<span>2024</span></li>
-        </ul>
+      <div class="item">
+        <div class="when">out/2026</div>
+        <h4>Grafos em Python</h4>
+        <div class="where">Faculdade · trabalho em grupo</div>
+        <p>Três representações de grafos com o mesmo menu de operações, feitas em equipe de quatro pessoas.</p>
       </div>
-      <div class="card reveal">
-        <h5>Idiomas</h5>
-        <ul><!-- ✏️ "on" = nível preenchido (de 5) -->
-          <li>Português<span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></li>
-          <li>Inglês<span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></li>
-          <li>Espanhol<span class="lvl"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></li>
-        </ul>
+      <div class="item">
+        <div class="when">abr/2025</div>
+        <h4>Estudos de Git e GitHub</h4>
+        <div class="where">Estudo</div>
+        <p>Comecei a organizar meus estudos e projetos com versionamento.</p>
       </div>
-      <div class="card reveal">
-        <h5>Interesses</h5>
-        <ul><!-- ✏️ -->
-          <li>Arquitetura de software<span>⌘</span></li>
-          <li>Cloud & DevOps<span>◎</span></li>
-          <li>Esportes / Música / etc.<span>✦</span></li>
-        </ul>
+      <div class="item">
+        <div class="when">jul/2023</div>
+        <h4>Primeiros passos</h4>
+        <div class="where">GitHub</div>
+        <p>Criei minha conta no GitHub e comecei a programar.</p>
       </div>
     </div>
   </div>
@@ -536,13 +553,11 @@
       <div>
         <div class="num mono accent" style="font-size:12px;letter-spacing:.14em">05 — CONTATO</div>
         <h2 style="margin-top:14px">Bora criar algo <span class="serif accent">juntos?</span></h2>
-        <p style="color:var(--muted);margin-top:18px;max-width:420px">Aberto a oportunidades, freelas e boas conversas sobre tecnologia. Respondo rapidinho.</p>
-        <!-- ✏️ SEU E-MAIL -->
-        <a href="mailto:seuemail@exemplo.com" class="mail">seuemail@exemplo.com <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <p style="color:var(--muted);margin-top:18px;max-width:420px">Aberto a oportunidades de estágio, vagas e projetos. Me chama por e-mail ou no LinkedIn.</p>
+        <a href="mailto:la9643076@gmail.com" class="mail">la9643076@gmail.com <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
         <div class="list">
-          <a href="https://linkedin.com/in/seu-usuario" target="_blank" rel="noopener">LinkedIn <span>↗</span></a>
-          <a href="https://github.com/seu-usuario" target="_blank" rel="noopener">GitHub <span>↗</span></a>
-          <a href="https://wa.me/5511999999999" target="_blank" rel="noopener">WhatsApp <span>↗</span></a>
+          <a href="https://www.linkedin.com/in/luiz-antonio-818554282/" target="_blank" rel="noopener">LinkedIn <span>↗</span></a>
+          <a href="https://github.com/luiz692" target="_blank" rel="noopener">GitHub <span>↗</span></a>
         </div>
       </div>
       <form id="form">
@@ -550,7 +565,7 @@
           <label>Nome<input name="nome" required placeholder="Seu nome"></label>
           <label>E-mail<input name="email" type="email" required placeholder="voce@email.com"></label>
         </div>
-        <label>Assunto<input name="assunto" placeholder="Oportunidade, projeto, ideia…"></label>
+        <label>Assunto<input name="assunto" placeholder="Vaga, projeto, ideia…"></label>
         <label>Mensagem<textarea name="msg" rows="6" required maxlength="800" placeholder="Conta um pouco sobre o que você precisa"></textarea></label>
         <button class="btn primary" type="submit">Enviar mensagem
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></button>
@@ -562,7 +577,7 @@
 
 <footer>
   <div class="wrap">
-    <span>© <span id="ano"></span> Seu Nome. Feito com café e código.</span>
+    <span>© <span id="ano"></span> Luiz Antonio Marcussi Neto.</span>
     <a href="#inicio">Voltar ao topo ↑</a>
   </div>
 </footer>
@@ -572,8 +587,8 @@
 </button>
 
 <script>
-  // ✏️ e-mail que recebe as mensagens do formulário
-  const MEU_EMAIL = 'seuemail@exemplo.com';
+  // e-mail que recebe as mensagens do formulário
+  const MEU_EMAIL = 'la9643076@gmail.com';
 
   document.getElementById('ano').textContent = new Date().getFullYear();
 
@@ -597,7 +612,7 @@
     const el = e.target, end = +el.dataset.count, t0 = performance.now();
     const step = t => {
       const p = Math.min((t - t0) / 1200, 1);
-      el.innerHTML = Math.round(end * (1 - Math.pow(1 - p, 3))) + '<em>+</em>';
+      el.innerHTML = Math.round(end * (1 - Math.pow(1 - p, 3))) + (el.dataset.plus ? '<em>+</em>' : '');
       if (p < 1) requestAnimationFrame(step);
     };
     requestAnimationFrame(step); cio.unobserve(el);
