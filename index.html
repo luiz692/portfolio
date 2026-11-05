@@ -8,7 +8,7 @@
 <meta name="description" content="Portfólio de Luiz Antonio Marcussi Neto, de Marília (SP): Ciência da Computação na Unimar, suporte técnico no Grupo Facimus, front-end e projetos em C#/.NET, Next.js e PostgreSQL.">
 <meta property="og:title" content="Luiz Antonio | Suporte Técnico e Desenvolvimento">
 <meta property="og:description" content="Ciência da Computação · Suporte Técnico · Front-end. Projetos, habilidades e contato.">
-<meta property="og:image" content="https://luiz692.github.io/portfolio/assets/foto-recorte.png">
+<meta property="og:image" content="https://luiz692.github.io/portfolio/assets/foto-perfil.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -94,14 +94,14 @@
   @keyframes spin{to{transform:rotate(360deg)}}
   .photo-card .clip{position:absolute;left:0;bottom:0;width:100%;height:100%;overflow:hidden;
     border-radius:0 0 50% 50% / 0 0 38.5% 38.5%}
-  .photo-card img{position:absolute;left:50%;bottom:-2%;height:100%;width:auto;max-width:none;transform:translateX(-50%);
+  .photo-card img{position:absolute;left:50%;bottom:-2%;height:84%;width:auto;max-width:none;transform:translateX(-50%);
     filter:drop-shadow(0 20px 30px rgba(0,0,0,.5));transition:transform .8s cubic-bezier(.2,.7,.2,1)}
   .photo-card:hover img{transform:translateX(-50%) translateY(-10px)}
   .chip{position:absolute;z-index:3;background:rgba(22,22,26,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line-2);border-radius:16px;padding:12px 16px;font-size:13px;box-shadow:0 20px 40px -18px rgba(0,0,0,.6);animation:float 6s ease-in-out infinite}
   .chip small{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
-  .chip.c1{top:30%;left:-30px}
+  .chip.c1{top:9%;left:-30px}
   .chip.c1 b{font-size:22px;color:var(--accent)}
-  .chip.c2{top:50%;right:-12px;animation-delay:-2s;font-family:var(--mono);font-size:12px;line-height:1.7}
+  .chip.c2{top:70%;right:-12px;animation-delay:-2s;font-family:var(--mono);font-size:12px;line-height:1.7}
   .chip.c2 .k{color:#c792ea}.chip.c2 .f{color:var(--accent)}.chip.c2 .s{color:#9b9ba6}
   .chip.c3{bottom:6%;left:-10px;animation-delay:-4s;display:flex;align-items:center;gap:10px}
   .chip.c3 .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)}
@@ -275,7 +275,7 @@
     .hero-grid,.about,.timeline-wrap,.contact{grid-template-columns:1fr}
     .hero-grid{gap:64px}
     .photo-card{width:min(100% - 40px,400px)}
-    .chip.c1{left:-16px}.chip.c2{right:-16px}.chip.c3{left:-6px}
+    .chip.c1{left:-16px}.chip.c2{right:-16px;top:75%}.chip.c3{left:auto;right:-6px;top:9%;bottom:auto}
     .projects{grid-template-columns:1fr}
     .project:first-child{flex-direction:column}
     .project:first-child .thumb{border-right:0;border-bottom:1px solid var(--line);min-height:0;aspect-ratio:16/9}
@@ -343,7 +343,7 @@
 
     <div class="photo-card reveal">
       <div class="ring"></div>
-      <div class="clip"><img src="assets/foto-recorte.png" alt="Foto de Luiz Antonio"></div>
+      <div class="clip"><img src="assets/foto-perfil.webp" alt="Foto de Luiz Antonio"></div>
       <div class="chip c1"><small>Ciência da Computação</small><b>Unimar</b></div>
       <div class="chip c2"><span class="k">var</span> luiz = <span class="k">new</span> <span class="f">ITSupportTechnician</span>(<br>&nbsp; trabalho: <span class="s">"Grupo Facimus"</span>,<br>&nbsp; stack: <span class="s">".NET + Next"</span><br>);</div>
       <div class="chip c3"><span class="dot"></span> Marília · SP</div>
