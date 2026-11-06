@@ -656,13 +656,13 @@
           <a href="https://github.com/luiz692" target="_blank" rel="noopener">GitHub <span>↗</span></a>
         </div>
       </div>
-      <form id="form">
+      <form id="form" name="contato" role="form" aria-label="Formulário de contato" autocomplete="on" data-form-type="contact">
         <div class="row2">
-          <label>Nome<input name="nome" required placeholder="Seu nome"></label>
-          <label>E-mail<input name="email" type="email" required placeholder="voce@email.com"></label>
+          <label>Nome<input name="nome" type="text" autocomplete="name" required placeholder="Seu nome" data-lpignore="true" data-1p-ignore data-bwignore data-form-type="other"></label>
+          <label>E-mail<input name="email" type="email" inputmode="email" autocomplete="email" required placeholder="voce@email.com" data-lpignore="true" data-1p-ignore data-bwignore data-form-type="other"></label>
         </div>
-        <label>Assunto<input name="assunto" placeholder="Vaga, projeto, ideia…"></label>
-        <label>Mensagem<textarea name="msg" rows="6" required maxlength="800" placeholder="Conta um pouco sobre o que você precisa"></textarea></label>
+        <label>Assunto<input name="assunto" type="text" autocomplete="off" placeholder="Vaga, projeto, ideia…" data-lpignore="true" data-1p-ignore data-bwignore data-form-type="other"></label>
+        <label>Mensagem<textarea name="msg" autocomplete="off" data-lpignore="true" data-1p-ignore data-bwignore data-form-type="other" rows="6" required maxlength="800" placeholder="Conta um pouco sobre o que você precisa"></textarea></label>
         <button class="btn primary" type="submit">Enviar mensagem
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></button>
       </form>
